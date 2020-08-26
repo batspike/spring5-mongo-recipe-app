@@ -5,8 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.samcancode.converters.RecipeDtoToRecipe;
 import com.samcancode.converters.RecipeToRecipeDto;
 import com.samcancode.domain.Recipe;
@@ -30,7 +28,7 @@ public class RecipeServiceIT {
     @Autowired
     RecipeToRecipeDto recipeToRecipeDto;
 
-    @Transactional
+    //@Transactional //not supported for mongo db
     @Test
     public void testSaveOfDescription() throws Exception {
         //given
