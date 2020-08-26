@@ -1,6 +1,8 @@
 package com.samcancode.bootstrap;
 
 import lombok.extern.slf4j.Slf4j;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -15,6 +17,9 @@ import com.samcancode.domain.UnitOfMeasure;
 import com.samcancode.repositories.CategoryRepository;
 import com.samcancode.repositories.RecipeRepository;
 import com.samcancode.repositories.UnitOfMeasureRepository;
+import com.samcancode.repositories.reactive.CategoryReactiveRepository;
+import com.samcancode.repositories.reactive.RecipeReactiveRepository;
+import com.samcancode.repositories.reactive.UnitOfMeasureReactiveRepository;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -28,7 +33,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     private final CategoryRepository categoryRepository;
     private final RecipeRepository recipeRepository;
     private final UnitOfMeasureRepository unitOfMeasureRepository;
-
+    
     public RecipeBootstrap(CategoryRepository categoryRepository,
                            RecipeRepository recipeRepository, UnitOfMeasureRepository unitOfMeasureRepository) {
         this.categoryRepository = categoryRepository;
