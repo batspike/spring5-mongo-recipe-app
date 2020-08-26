@@ -30,7 +30,7 @@ public class IngredientDtoToIngredient implements Converter<IngredientDto, Ingre
         if(source.getRecipeId() != null){
             Recipe recipe = new Recipe();
             recipe.setId(source.getRecipeId());
-            ingredient.setRecipe(recipe);
+//            ingredient.setRecipe(recipe); // remove for mongodb
             recipe.addIngredient(ingredient);
         }
 
