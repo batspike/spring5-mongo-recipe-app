@@ -4,10 +4,10 @@
 # spring5-mongo-recipe-app
 Recipe Application Using MongoDB
 
-This repository is for an example application built in my Spring Framework 5 
+This repository is for an example application built with Spring 5 Framework
 
 Technology used in this project:
-1. Springboot 2.3.3
+1. Springboot 2.3.3 with web-starter, data-mongodb-starter, validation-starter
 2. Gradle Build Tools
 3. JUnit 5 Testing
 4. Jacoco & CodeCov for Test Coverage Reports
