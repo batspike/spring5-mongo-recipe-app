@@ -96,6 +96,10 @@ hs_err_pid*
 ### Gradle ###
 .gradle
 build/
+.gradle/buildOutputCleanup/cache.properties
+.gradle/checksums/checksums.lock
+.gradle/checksums/md5-checksums.bin
+.gradle/checksums/sha1-checksums.bin
 
 # Ignore Gradle GUI config
 gradle-app.setting
